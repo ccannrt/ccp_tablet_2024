@@ -1,0 +1,172 @@
+@media (prefers-reduced-motion: reduce) {
+    img[src$='.gif'], video {
+        display: none;
+    }
+  }
+header {
+    margin: 30px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: navy;
+}
+body {
+    background-image: linear-gradient(to bottom right, #7DF9FF, #8C50DE);
+    color: #3a3b3c;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*:focus {
+    border: solid #ffa500 2px;
+    padding: 3px;
+}
+.skip {
+    left:50%;
+    position:absolute;
+    transform:translateY(-500%)
+}
+.skip:focus {
+    transform: translateY(100%);
+    background-color: #000000;
+}
+.nav_list {
+    text-align: center;
+    margin: 0 auto;
+}
+.nav_list ul li {
+    margin-top: 20px;
+}
+.nav_list ul li:hover {
+    font-weight: bold;
+    transform: rotate(-20deg);
+    transition: font-weight 1s, transform 1s;
+    transition-timing-function: ease;
+}
+
+.current_page {
+    font-weight: bold;
+    rotate: -20deg;
+    border: solid #3a3b3c 1px;
+    padding: 8px;
+    margin: -8px;
+}
+
+.extra_space {
+    margin-top: 30px;
+}
+
+
+main {
+    margin: 10px 20px 60px 20px;
+    
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 48pt;
+    margin-top: 30px;
+}
+header h1 {
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5900E0;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 32pt;
+}
+
+h3 {
+    font-size: 24pt;
+}
+
+p {
+    line-height: 20pt;
+}
+
+img, video {
+    border: 5px solid cyan;
+    border-radius: 0 30px 0 0;
+    padding: 10px;
+    margin: 10px auto;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.description {
+    background-color: #2B5ADB;
+    border: solid #2B5ADB 1px;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 0 10%;
+    color: white;
+}
+
+.pet {
+    display: grid;
+    grid-template-columns: auto;
+    align-content: center;
+    grid-gap: 20px;
+}
+.pet .gallery {
+    background-color: navy;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 20px;
+    width: 100%;
+}
+.description {
+    background-color: #2B5ADB;
+    border: solid #2B5ADB 1px;
+    border-radius: 25px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 10%;
+}
+
+.recipe {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 10px 0;
+    margin-bottom: 60px;
+}
+.instructions li {
+    display: block;
+    margin-top: 10px;
+}
+.travel-photo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.center {
+    display: grid;
+    justify-content: center;
+}
+.back-to-top {
+    background-color: navy;
+    padding: 20px 20px;
+    color: white;
+    margin: 40px auto 40px auto;
+}
+
+@media screen and (min-width: 600px) {
+    .pet .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery img:first-child, .gallery img:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .travel-photo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
